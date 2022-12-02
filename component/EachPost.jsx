@@ -1,6 +1,6 @@
 export default function EachPosts(props) {
 
-    retuen(
+    return(
         <article>
             <a href={props.url}>
                 <h3>{props.title}</h3>

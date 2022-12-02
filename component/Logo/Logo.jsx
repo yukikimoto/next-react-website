@@ -4,7 +4,7 @@ export default function Logo() {
     return (
         <>
             <Link href="/">
-                <a>トップページを開く</a>  
+                CUBE
             </Link>
         </>
     );
