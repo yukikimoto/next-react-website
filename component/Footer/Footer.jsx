@@ -1,9 +1,12 @@
-import Logo from "../Logo/Logo.jsx";
+import Logo from "Logo/Logo.jsx";
+import styles from 'component/Footer/Footer.module.css'
 
-export default function Footer() {
+export default function Footer(className={wrapper}) {
   return (
     <footer>
-      <Logo />
+      <div className={styles.flexContainer}>
+        <Logo />
+      </div>
     </footer>
   );
 }
