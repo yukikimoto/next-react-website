@@ -1,10 +1,10 @@
-
+import Container from 'component/Container/Container';
 import Hero from "component/Hero/Hero";
 
 export default function Home() {
   return (
-    <div>
+    <Container>
       <Hero title="CUBE" subtitle="アウトプットしていくサイト" imageOn />
-    </div>
+    </Container>
   );
 }

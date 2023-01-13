@@ -5,7 +5,7 @@ export default function Logo({ boxOn = false}) {
     return (
         <>
             <Link href="/"
-            className={styles.flexContainer}>
+            className={boxOn ? styles.box : styles.flexContainer}>
                 CUBE
             </Link>
         </>
