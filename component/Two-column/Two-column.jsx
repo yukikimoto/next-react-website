@@ -8,7 +8,7 @@ export default function TwoColumn({ children }) {
     )
 }
 
-export function TwoColumnMain({ children }) {
+TwoColumn.Main = function Main({ children }) {
     return (
         <div className={styles.main}>
             {children}
@@ -16,7 +16,7 @@ export function TwoColumnMain({ children }) {
     )
 }
 
-export function TwoColumnSidebar({ children }) {
+TwoColumn.Sidebar = function Sidebar({ children }) {
     return (
         <div className={styles.sidebar}>
             {children}

@@ -1,16 +1,32 @@
+import Meta from 'component/meta/meta'
 import Container from "component/Container/Container";
 import Hero from "component/Hero/Hero";
 import PostBody from "component/Post-body/Post-body";
 import Contact from "component/Contact/Contact";
-import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from "component/Two-column/Two-column";
+import TwoColumn from "component/Two-column/Two-column";
+import Image from 'next/image'
+import eyecatch from 'images/about.jpg'
 
 export default function About() {
   return (
     <Container>
+      <Meta pageTitle="アバウト" />
+
       <Hero title="About" subtitle="About development activities" />
 
+      <figure>
+        <Image
+          src={eyecatch}
+          alt=""
+          layout="responsive"
+          sizes="(main-width: 1152px, 100vw"
+          priority
+          placeholder="blur"
+        />
+      </figure>
+
       <TwoColumn>
-        <TwoColumnMain>
+        <TwoColumn.Main>
         <PostBody>
           <p>
             Cubeが得意とする分野はモノづくりです。3次元から２次元の造形、プログラミングやデザインなど、さまざまな技術を組み合わせることによって社会や環境を結びつけるクリエイティブを提案し続けています。
@@ -27,11 +43,11 @@ export default function About() {
             今までと違うものを作ることで愛着が湧いてきます。そこで興味を持ったことは小さなことでもいいから取り入れて、良いものを作れるようにします。小さなヒントから新しいものを生み出すようなモノづくりは、これからも続けていきたいです。
           </p>
           </PostBody>
-        </TwoColumnMain>
+        </TwoColumn.Main>
 
-        <TwoColumnSidebar>
+        <TwoColumn.Sidebar>
           <Contact />
-        </TwoColumnSidebar>
+        </TwoColumn.Sidebar>
       </TwoColumn>
     </Container>
   );
